@@ -13,12 +13,16 @@ import { uploadImageToCloudinary } from "@/lib/cloudinary"
 import { Spinner } from "@/components/ui/spinner"
 
 const PUJO_TYPES = [
-  "Pandal",
-  "Temple",
-  "Club Pujo",
   "Bonedi Bari",
+  "Club Pujo",
+  "Famous Pujo",
+  "Traditional",
   "Barowari Pujo",
-  "Famous Pujo"
+  "Theme Pujo",
+  "Housing Society",
+  "Temple",
+  "Ekchala",
+  "Sabeki"
 ]
 
 const WEST_BENGAL_DISTRICTS = [

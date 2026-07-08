@@ -16,52 +16,71 @@ const searchResults = [
   { id: "6", name: "Mudiali Club", slug: "mudiali", area: "Tollygunge", district: "Kolkata", type: "Club Pujo" },
 ]
 
+const PUJO_TYPES = [
+  "Bonedi Bari",
+  "Club Pujo",
+  "Famous Pujo",
+  "Traditional",
+  "Barowari Pujo",
+  "Theme Pujo",
+  "Housing Society",
+  "Temple",
+  "Ekchala",
+  "Sabeki"
+]
+
+const WB_LOCATIONS = [
+  "Alipurduar", "Asansol", "Baharampur", "Balurghat", "Bankura", "Barasat", 
+  "Bardhaman", "Barrackpore", "Baruipur", "Basirhat", "Bidhannagar (Salt Lake)", 
+  "Birbhum", "Bishnupur", "Bongaon", "Canning", "Chandannagar", "Chinsurah", 
+  "Contai", "Cooch Behar", "Darjeeling", "Diamond Harbour", "Digha", 
+  "Dinhata", "Durgapur", "Haldia", "Haldibari", "Hooghly", "Howrah", 
+  "Islampur", "Jalpaiguri", "Jhargram", "Kakdwip", "Kalimpong", "Kalna", 
+  "Kalyani", "Katwa", "Kharagpur", "Kolkata", "Krishnanagar", "Kurseong", 
+  "Malda", "Mathabhanga", "Medinipur", "Mekhliganj", "Mirik", "Murshidabad", 
+  "Nabadwip", "Nadia", "New Town", "North 24 Parganas", "Purulia", 
+  "Raiganj", "Rampurhat", "Ranaghat", "Serampore", "Siliguri", 
+  "South 24 Parganas", "Suri", "Tamluk", "Tufanganj"
+]
+
 export default function SearchPage() {
   const [isFiltersOpen, setIsFiltersOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState("")
 
   const FiltersContent = () => (
     <>
       <div className="flex flex-col gap-3">
-        <h3 className="text-sm font-semibold text-[var(--text-secondary)] uppercase tracking-wider">Type</h3>
-        <div className="flex flex-col gap-2">
-          <label className="flex items-center gap-2 text-[var(--text-secondary)] cursor-pointer">
-            <input type="checkbox" className="rounded border-[var(--border-strong)] text-[var(--brand-red-700)] focus:ring-[var(--brand-red-700)]" />
-            Bonedi Bari
-          </label>
-          <label className="flex items-center gap-2 text-[var(--text-secondary)] cursor-pointer">
-            <input type="checkbox" className="rounded border-[var(--border-strong)] text-[var(--brand-red-700)] focus:ring-[var(--brand-red-700)]" />
-            Club Pujo
-          </label>
-          <label className="flex items-center gap-2 text-[var(--text-secondary)] cursor-pointer">
-            <input type="checkbox" className="rounded border-[var(--border-strong)] text-[var(--brand-red-700)] focus:ring-[var(--brand-red-700)]" />
-            Famous Pujo
-          </label>
-          <label className="flex items-center gap-2 text-[var(--text-secondary)] cursor-pointer">
-            <input type="checkbox" className="rounded border-[var(--border-strong)] text-[var(--brand-red-700)] focus:ring-[var(--brand-red-700)]" />
-            Traditional
-          </label>
+        <h3 className="text-sm font-semibold text-[var(--text-secondary)] uppercase tracking-wider">Pujo Type</h3>
+        <div className="flex flex-col gap-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
+          {PUJO_TYPES.map(type => (
+            <label key={type} className="flex items-center gap-2 text-[var(--text-secondary)] cursor-pointer hover:text-[var(--text-primary)] transition-colors">
+              <input type="checkbox" value={type} className="rounded border-[var(--border-strong)] text-[var(--brand-red-700)] focus:ring-[var(--brand-red-700)] w-4 h-4" />
+              {type}
+            </label>
+          ))}
         </div>
       </div>
 
-      <div className="flex flex-col gap-3">
-        <h3 className="text-sm font-semibold text-[var(--text-secondary)] uppercase tracking-wider">District</h3>
-        <div className="flex flex-col gap-2">
-          <label className="flex items-center gap-2 text-[var(--text-secondary)] cursor-pointer">
-            <input type="checkbox" className="rounded border-[var(--border-strong)] text-[var(--brand-red-700)] focus:ring-[var(--brand-red-700)]" />
-            Kolkata
-          </label>
-          <label className="flex items-center gap-2 text-[var(--text-secondary)] cursor-pointer">
-            <input type="checkbox" className="rounded border-[var(--border-strong)] text-[var(--brand-red-700)] focus:ring-[var(--brand-red-700)]" />
-            Howrah
-          </label>
-          <label className="flex items-center gap-2 text-[var(--text-secondary)] cursor-pointer">
-            <input type="checkbox" className="rounded border-[var(--border-strong)] text-[var(--brand-red-700)] focus:ring-[var(--brand-red-700)]" />
-            North 24 Parganas
-          </label>
-          <label className="flex items-center gap-2 text-[var(--text-secondary)] cursor-pointer">
-            <input type="checkbox" className="rounded border-[var(--border-strong)] text-[var(--brand-red-700)] focus:ring-[var(--brand-red-700)]" />
-            South 24 Parganas
-          </label>
+      <div className="flex flex-col gap-3 mt-4">
+        <h3 className="text-sm font-semibold text-[var(--text-secondary)] uppercase tracking-wider">City / Town / District</h3>
+        
+        {/* Simple inline search for locations so user doesn't have to scroll all 60+ */}
+        <Input 
+          placeholder="Find city..." 
+          className="h-8 text-sm mb-1 bg-[var(--surface-secondary)]" 
+          onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
+        />
+        
+        <div className="flex flex-col gap-2 max-h-64 overflow-y-auto pr-2 custom-scrollbar border border-[var(--border-secondary)] rounded-md p-2">
+          {WB_LOCATIONS.filter(loc => loc.toLowerCase().includes(searchQuery)).map(loc => (
+            <label key={loc} className="flex items-center gap-2 text-[var(--text-secondary)] cursor-pointer hover:text-[var(--text-primary)] transition-colors">
+              <input type="checkbox" value={loc} className="rounded border-[var(--border-strong)] text-[var(--brand-red-700)] focus:ring-[var(--brand-red-700)] w-4 h-4" />
+              {loc}
+            </label>
+          ))}
+          {WB_LOCATIONS.filter(loc => loc.toLowerCase().includes(searchQuery)).length === 0 && (
+            <span className="text-xs text-[var(--text-tertiary)] italic">No locations found</span>
+          )}
         </div>
       </div>
     </>
