@@ -1,0 +1,163 @@
+/* ==========================================================================
+   SHAROD DARSHAN DESIGN SYSTEM
+   Border System v1.0
+   Production Ready
+   ========================================================================== */
+
+:root{
+
+/* ==========================================================
+   BORDER WIDTH
+   ========================================================== */
+
+--border-0:0;
+--border-1:1px;
+--border-2:2px;
+--border-3:3px;
+--border-4:4px;
+--border-6:6px;
+--border-8:8px;
+
+/* ==========================================================
+   BORDER STYLE
+   ========================================================== */
+
+--border-style-solid:solid;
+--border-style-dashed:dashed;
+--border-style-dotted:dotted;
+--border-style-double:double;
+--border-style-none:none;
+
+/* ==========================================================
+   SEMANTIC BORDER WIDTHS
+   ========================================================== */
+
+--border-width-card:1px;
+--border-width-input:1px;
+--border-width-button:1px;
+--border-width-modal:1px;
+--border-width-dropdown:1px;
+--border-width-divider:1px;
+--border-width-gallery:1px;
+--border-width-avatar:2px;
+
+/* ==========================================================
+   DIVIDERS
+   ========================================================== */
+
+--divider-thin:1px;
+--divider-medium:2px;
+--divider-thick:4px;
+
+/* ==========================================================
+   OUTLINES
+   ========================================================== */
+
+--outline-width:2px;
+--outline-offset:2px;
+
+/* ==========================================================
+   TABLE BORDERS
+   ========================================================== */
+
+--table-border-width:1px;
+--table-row-divider:1px;
+
+/* ==========================================================
+   IMAGE FRAMES
+   ========================================================== */
+
+--image-frame-width:2px;
+--featured-image-frame-width:4px;
+
+/* ==========================================================
+   FESTIVAL ACCENTS
+   ========================================================== */
+
+--festival-accent-width:3px;
+--heritage-accent-width:4px;
+
+}
+
+@layer utilities {
+  /* Base Border Utilities */
+  .border { border: var(--border-1) solid var(--border-primary); }
+  .border-0 { border: none; }
+  .border-1 { border-width: 1px; }
+  .border-2 { border-width: 2px; }
+  .border-3 { border-width: 3px; }
+  .border-4 { border-width: 4px; }
+
+  /* Border Sides */
+  .border-top { border-top: 1px solid var(--border-primary); }
+  .border-right { border-right: 1px solid var(--border-primary); }
+  .border-bottom { border-bottom: 1px solid var(--border-primary); }
+  .border-left { border-left: 1px solid var(--border-primary); }
+
+  /* Border Colors */
+  .border-primary { border-color: var(--border-primary); }
+  .border-secondary { border-color: var(--border-secondary); }
+  .border-brand { border-color: var(--border-brand); }
+  .border-success { border-color: var(--success-border); }
+  .border-warning { border-color: var(--warning-border); }
+  .border-error { border-color: var(--error-border); }
+  .border-info { border-color: var(--info-border); }
+
+  /* Dividers */
+  .divider { height: 1px; background: var(--border-secondary); width: 100%; }
+  .divider-vertical { width: 1px; height: 100%; background: var(--border-secondary); }
+
+  /* Card Border */
+  .card-border { border: var(--border-width-card) solid var(--card-border); }
+
+  /* Input Border */
+  .input-border {
+    border: var(--border-width-input) solid var(--input-border);
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .input-border:hover { border-color: var(--input-border-hover); }
+  .input-border:focus-within {
+    border-color: var(--input-border-focus);
+    box-shadow: var(--shadow-input-focus);
+  }
+
+  /* Image Frame */
+  .image-frame {
+    border: var(--image-frame-width) solid var(--border-secondary);
+    padding: 4px;
+    background: white;
+  }
+
+  /* Featured Pujo Image */
+  .featured-image {
+    border: var(--featured-image-frame-width) solid var(--gold-400);
+    box-shadow: var(--glow-gold-sm);
+  }
+
+  /* Heritage Accent */
+  .heritage-border { border-left: 4px solid var(--terracotta-600); padding-left: 20px; }
+
+  /* Festival Accent */
+  .festival-border { border-left: 3px solid var(--brand-red-700); padding-left: 18px; }
+
+  /* Dashed Upload Zone */
+  .upload-zone { border: 2px dashed var(--border-primary); transition: .25s; }
+  .upload-zone:hover { border-color: var(--brand-red-700); background: var(--brand-red-50); }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 16px; border-bottom: 1px solid var(--border-secondary); }
+  thead { border-bottom: 2px solid var(--border-primary); }
+
+  /* Focus Ring */
+  .focus-ring:focus-visible {
+    outline: var(--outline-width) solid var(--brand-red-700);
+    outline-offset: var(--outline-offset);
+  }
+}
+
+.dark {
+  --border-primary: #43322C;
+  --border-secondary: #352723;
+  --border-strong: #5A463F;
+}

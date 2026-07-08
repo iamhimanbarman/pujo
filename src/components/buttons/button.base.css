@@ -1,0 +1,135 @@
+/* ==========================================================================
+   SHAROD DARSHAN DESIGN SYSTEM
+   components/buttons/button.base.css
+   Version: 1.0
+   Depends on:
+   - button.tokens.css
+   - motion.css
+   - shadows.css
+   - semantic.css
+   ========================================================================== */
+
+/* Base button -------------------------------------------------------------- */
+
+@layer components {
+  .btn{
+    --_bg: transparent;
+    --_fg: var(--text-primary);
+    --_border: transparent;
+    --_shadow: var(--button-shadow-rest);
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--button-icon-gap-md);
+
+    min-width: var(--button-min-width-md);
+    min-height: max(var(--button-height-md), var(--minimum-touch-target));
+
+    padding-inline: var(--button-padding-inline-md);
+    padding-block: var(--button-padding-block-md);
+
+    border: var(--button-border-width) solid var(--_border);
+    border-radius: var(--button-radius-md);
+
+    background: var(--_bg);
+    color: var(--_fg);
+    box-shadow: var(--_shadow);
+
+    font: inherit;
+    font-size: var(--button-font-md);
+    font-weight: var(--button-font-weight);
+    letter-spacing: var(--button-letter-spacing);
+    line-height: 1;
+
+    white-space: nowrap;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    cursor: pointer;
+
+    transition:
+      transform var(--button-transition-duration) var(--button-transition-timing),
+      background-color var(--button-transition-duration) var(--button-transition-timing),
+      color var(--button-transition-duration) var(--button-transition-timing),
+      border-color var(--button-transition-duration) var(--button-transition-timing),
+      box-shadow var(--button-transition-duration) var(--button-transition-timing),
+      opacity var(--button-transition-duration) var(--button-transition-timing);
+  }
+
+  .btn:hover:not(:disabled,[aria-disabled="true"]){
+    transform:
+      translateY(var(--button-hover-translate))
+      scale(var(--button-hover-scale));
+    box-shadow: var(--button-shadow-hover);
+  }
+
+  .btn:active:not(:disabled,[aria-disabled="true"]){
+    transform: scale(var(--button-active-scale));
+    box-shadow: var(--button-shadow-active);
+  }
+
+  .btn:focus{
+    outline: none;
+  }
+
+  .btn:focus-visible{
+    outline: none;
+    box-shadow:
+      var(--button-shadow-hover),
+      var(--button-shadow-focus);
+  }
+
+  .btn:disabled,
+  .btn[aria-disabled="true"]{
+    opacity: var(--button-disabled-opacity);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .btn > svg{
+    width: var(--button-icon-md);
+    height: var(--button-icon-md);
+    flex-shrink: 0;
+  }
+
+  .btn > .label{
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .btn-block{
+    display:flex;
+    width:100%;
+  }
+
+  .btn-pill{
+    border-radius: var(--button-radius-pill);
+  }
+
+  .btn-square{
+    aspect-ratio:1;
+    min-width: var(--button-height-md);
+    padding-inline:0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .btn{
+    transition:none;
+  }
+  .btn:hover,
+  .btn:active{
+    transform:none;
+  }
+}
+
+@media (forced-colors: active){
+  .btn{
+    forced-color-adjust:auto;
+    border-color: ButtonText;
+  }
+}

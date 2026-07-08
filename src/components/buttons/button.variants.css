@@ -1,0 +1,123 @@
+/* ==========================================================================
+   SHAROD DARSHAN DESIGN SYSTEM
+   components/buttons/button.variants.css
+   Version: 1.0
+   Depends on button.base.css
+   ========================================================================== */
+
+@layer components {
+  /* Primary --------------------------------------------------- */
+  .btn-primary{
+    --_bg: var(--gradient-button-primary);
+    --_fg: var(--button-primary-text);
+    --_border: transparent;
+  }
+  .btn-primary:hover{
+    filter: brightness(1.03);
+  }
+
+  /* Secondary ------------------------------------------------- */
+  .btn-secondary{
+    --_bg: var(--gradient-button-secondary);
+    --_fg: var(--button-secondary-text);
+    --_border: transparent;
+  }
+
+  /* Outline --------------------------------------------------- */
+  .btn-outline{
+    --_bg: transparent;
+    --_fg: var(--text-primary);
+    --_border: var(--border-primary);
+  }
+  .btn-outline:hover{
+    --_bg: var(--surface-secondary);
+  }
+
+  /* Ghost ----------------------------------------------------- */
+  .btn-ghost{
+    --_bg: transparent;
+    --_fg: var(--text-primary);
+    --_border: transparent;
+    box-shadow:none;
+  }
+  .btn-ghost:hover{
+    --_bg: var(--surface-secondary);
+  }
+
+  /* Tonal ----------------------------------------------------- */
+  .btn-tonal{
+    --_bg: var(--brand-red-50);
+    --_fg: var(--brand-red-700);
+    --_border: transparent;
+  }
+
+  /* Success --------------------------------------------------- */
+  .btn-success{
+    --_bg: var(--success-bg);
+    --_fg: var(--success-text-on, #fff);
+  }
+
+  /* Warning --------------------------------------------------- */
+  .btn-warning{
+    --_bg: var(--warning-bg);
+    --_fg: var(--warning-text-on, #111);
+  }
+
+  /* Danger ---------------------------------------------------- */
+  .btn-danger{
+    --_bg: var(--error-bg);
+    --_fg: var(--error-text-on, #fff);
+  }
+
+  /* Upload CTA ------------------------------------------------ */
+  .btn-upload{
+    --_bg: var(--gradient-cta);
+    --_fg: #fff;
+  }
+
+  /* Hero CTA -------------------------------------------------- */
+  .btn-hero{
+    min-height: var(--button-height-xl);
+    padding-inline: var(--button-padding-inline-xl);
+    border-radius: var(--button-radius-pill);
+    font-size: var(--button-font-lg);
+  }
+
+  /* Floating Action Button ----------------------------------- */
+  .btn-fab{
+    width: var(--fab-size-md);
+    height: var(--fab-size-md);
+    min-width: var(--fab-size-md);
+    min-height: var(--fab-size-md);
+    padding:0;
+    border-radius:50%;
+    --_bg: var(--gradient-button-primary);
+    --_fg:#fff;
+  }
+
+  /* Link button ---------------------------------------------- */
+  .btn-link{
+    --_bg: transparent;
+    --_fg: var(--link-default);
+    --_border: transparent;
+    min-width:auto;
+    min-height:auto;
+    padding:0;
+    box-shadow:none;
+  }
+  .btn-link:hover{
+    text-decoration: underline;
+  }
+
+  /* Social examples ------------------------------------------ */
+  .btn-google{
+    --_bg:#fff;
+    --_fg:#202124;
+    --_border:#dadce0;
+  }
+
+  .btn-facebook{
+    --_bg:#1877F2;
+    --_fg:#fff;
+  }
+}

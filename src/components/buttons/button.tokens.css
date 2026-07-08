@@ -1,0 +1,173 @@
+/* ==========================================================================
+   SHAROD DARSHAN DESIGN SYSTEM
+   Button Tokens
+   Version: 1.0
+   ========================================================================== */
+
+:root {
+  /* ==========================================================
+     HEIGHT
+     ========================================================== */
+  --button-height-2xs: 28px;
+  --button-height-xs: 32px;
+  --button-height-sm: 40px;
+  --button-height-md: 48px;
+  --button-height-lg: 56px;
+  --button-height-xl: 64px;
+  --button-height-2xl: 72px;
+
+  /* ==========================================================
+     MIN WIDTH
+     ========================================================== */
+  --button-min-width-2xs: 56px;
+  --button-min-width-xs: 72px;
+  --button-min-width-sm: 96px;
+  --button-min-width-md: 120px;
+  --button-min-width-lg: 144px;
+  --button-min-width-xl: 168px;
+
+  /* ==========================================================
+     HORIZONTAL PADDING
+     ========================================================== */
+  --button-padding-inline-2xs: 10px;
+  --button-padding-inline-xs: 12px;
+  --button-padding-inline-sm: 16px;
+  --button-padding-inline-md: 20px;
+  --button-padding-inline-lg: 28px;
+  --button-padding-inline-xl: 36px;
+  --button-padding-inline-2xl: 44px;
+
+  /* ==========================================================
+     VERTICAL PADDING
+     ========================================================== */
+  --button-padding-block-2xs: 4px;
+  --button-padding-block-xs: 6px;
+  --button-padding-block-sm: 8px;
+  --button-padding-block-md: 10px;
+  --button-padding-block-lg: 12px;
+  --button-padding-block-xl: 14px;
+
+  /* ==========================================================
+     ICON
+     ========================================================== */
+  --button-icon-xs: 14px;
+  --button-icon-sm: 16px;
+  --button-icon-md: 18px;
+  --button-icon-lg: 20px;
+  --button-icon-xl: 24px;
+
+  --button-icon-gap-xs: 6px;
+  --button-icon-gap-sm: 8px;
+  --button-icon-gap-md: 10px;
+  --button-icon-gap-lg: 12px;
+
+  /* ==========================================================
+     FONT SIZE
+     ========================================================== */
+  --button-font-2xs: .6875rem;
+  --button-font-xs: .75rem;
+  --button-font-sm: .875rem;
+  --button-font-md: .9375rem;
+  --button-font-lg: 1rem;
+  --button-font-xl: 1.125rem;
+
+  /* ==========================================================
+     FONT WEIGHT
+     ========================================================== */
+  --button-font-weight: 600;
+
+  /* ==========================================================
+     LETTER SPACING
+     ========================================================== */
+  --button-letter-spacing: .01em;
+
+  /* ==========================================================
+     BORDER WIDTH
+     ========================================================== */
+  --button-border-width: 1px;
+
+  /* ==========================================================
+     RADIUS
+     ========================================================== */
+  --button-radius-xs: 10px;
+  --button-radius-sm: 12px;
+  --button-radius-md: 16px;
+  --button-radius-lg: 20px;
+  --button-radius-xl: 24px;
+  --button-radius-pill: 999px;
+  --button-radius-circle: 9999px;
+
+  /* ==========================================================
+     OPACITY
+     ========================================================== */
+  --button-disabled-opacity: .50;
+  --button-loading-opacity: .78;
+
+  /* ==========================================================
+     ELEVATION
+     ========================================================== */
+  --button-shadow-rest: var(--shadow-button);
+  --button-shadow-hover: var(--shadow-button-hover);
+  --button-shadow-focus: var(--shadow-focus-ring);
+  --button-shadow-active: var(--shadow-button-active);
+
+  /* ==========================================================
+     TRANSFORM
+     ========================================================== */
+  --button-hover-scale: 1.02;
+  --button-active-scale: .98;
+  --button-hover-translate: -2px;
+
+  /* ==========================================================
+     ANIMATION
+     ========================================================== */
+  --button-transition-duration: 180ms;
+  --button-transition-timing: cubic-bezier(.2,.8,.2,1);
+
+  /* ==========================================================
+     LOADING
+     ========================================================== */
+  --button-spinner-size: 18px;
+  --button-spinner-border: 2px;
+
+  /* ==========================================================
+     BADGE
+     ========================================================== */
+  --button-badge-size: 18px;
+  --button-badge-font: .625rem;
+
+  /* ==========================================================
+     FAB
+     ========================================================== */
+  --fab-size-sm: 56px;
+  --fab-size-md: 64px;
+  --fab-size-lg: 72px;
+  --fab-size-xl: 88px;
+
+  /* ==========================================================
+     SPLIT BUTTON
+     ========================================================== */
+  --split-divider-width: 1px;
+
+  /* ==========================================================
+     SEGMENTED CONTROL
+     ========================================================== */
+  --segment-gap: 4px;
+  --segment-padding: 4px;
+
+  /* ==========================================================
+     DROPDOWN
+     ========================================================== */
+  --dropdown-chevron-size: 18px;
+
+  /* ==========================================================
+     TOUCH TARGET
+     WCAG 2.2
+     ========================================================== */
+  --minimum-touch-target: 44px;
+
+  /* ==========================================================
+     Z INDEX
+     ========================================================== */
+  --button-z-index: 10;
+}

@@ -1,0 +1,52 @@
+/* ==========================================================
+   SHAROD DARSHAN
+   Premium Gradient Library
+   Version 1.0
+   ========================================================== */
+
+:root {
+  /* HERO */
+  --gradient-hero-sunrise: linear-gradient(180deg, #FFFDF9 0%, #FFF4E8 45%, #FFE8CF 100%);
+  --gradient-hero-evening: linear-gradient(180deg, #3B1020 0%, #6B1B2C 45%, #A11224 100%);
+  --gradient-hero-night: linear-gradient(180deg, #120D0B 0%, #1D1112 40%, #2D0E18 100%);
+
+  /* FESTIVAL */
+  --gradient-sindoor: linear-gradient(135deg, #A11224, #C8102E, #E11D48);
+  --gradient-diya: linear-gradient(135deg, #FFF8DD, #FFD76B, #D6A034);
+  --gradient-marigold: linear-gradient(135deg, #FFE7B3, #FFC14A, #F29B24);
+  --gradient-shakti: linear-gradient(135deg, #7A0F20, #A11224, #D6A034);
+
+  /* HERITAGE */
+  --gradient-terracotta: linear-gradient(135deg, #F6E3D7, #C56D45, #8B3D1E);
+  --gradient-kumartuli: linear-gradient(135deg, #F7EEE8, #DEB59B, #A96846);
+  --gradient-alpana: linear-gradient(180deg, #FFFFFF, #FFFDF8, #FFF8EF);
+
+  /* NATURE */
+  --gradient-ganga: linear-gradient(135deg, #EDF8FA, #84C8D6, #2E7080);
+  --gradient-leaf: linear-gradient(135deg, #EEF9F0, #86CC8F, #2F7D43);
+
+  /* BUTTONS */
+  --gradient-button-primary: linear-gradient(135deg, #C8102E, #A11224);
+  --gradient-button-secondary: linear-gradient(135deg, #FFD76B, #D6A034);
+
+  /* CARDS */
+  --gradient-card-light: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,248,240,.95));
+  --gradient-card-festival: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,244,232,.90));
+
+  /* IMAGE OVERLAYS */
+  --gradient-overlay-light: linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.72));
+  --gradient-overlay-dark: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.60));
+  --gradient-overlay-hero: linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.70));
+
+  /* GALLERY */
+  --gradient-gallery-hover: linear-gradient(rgba(161,18,36,.08), rgba(214,160,52,.08));
+
+  /* BADGES */
+  --gradient-famous: linear-gradient(135deg, #FFF8DD, #FFD76B);
+  --gradient-new: linear-gradient(135deg, #FFE4E7, #FDA4AF);
+  --gradient-approved: linear-gradient(135deg, #D9F2DE, #86CC8F);
+
+  /* CTA & FOOTER */
+  --gradient-cta: linear-gradient(135deg, #A11224 0%, #C8102E 40%, #D6A034 100%);
+  --gradient-footer: linear-gradient(180deg, #221610, #120D0B);
+}

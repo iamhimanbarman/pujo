@@ -1,0 +1,179 @@
+/* ==========================================================================
+   SHAROD DARSHAN DESIGN SYSTEM
+   Layout & Spacing Tokens
+   Version 1.0
+   ========================================================================== */
+
+:root {
+  /* ==========================================================
+     LAYOUT & SPACING
+     ========================================================== */
+  --grid-unit: 4px;
+
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-28: 112px;
+  --space-32: 128px;
+  --space-36: 144px;
+  --space-40: 160px;
+  --space-48: 192px;
+  --space-56: 224px;
+  --space-64: 256px;
+
+  --radius-none: 0;
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 999px;
+
+  --container-xs: 480px;
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1440px;
+  --container-max: 1600px;
+
+  --gutter-mobile: 20px;
+  --gutter-tablet: 32px;
+  --gutter-desktop: 48px;
+  --gutter-wide: 72px;
+
+  --section-xs: 48px;
+  --section-sm: 72px;
+  --section-md: 96px;
+  --section-lg: 128px;
+  --section-xl: 160px;
+
+  --card-padding-sm: 16px;
+  --card-padding-md: 24px;
+  --card-padding-lg: 32px;
+  --card-gap: 16px;
+
+  --button-height-sm: 40px;
+  --button-height-md: 48px;
+  --button-height-lg: 56px;
+  --button-padding-x-sm: 16px;
+  --button-padding-x-md: 20px;
+  --button-padding-x-lg: 28px;
+
+  --input-height: 52px;
+  --input-padding-x: 18px;
+  --input-padding-y: 14px;
+
+  --navbar-height: 76px;
+  --navbar-padding: 20px;
+
+  --sidebar-width: 300px;
+  --sidebar-collapsed: 88px;
+
+  --hero-padding-top: 120px;
+  --hero-padding-bottom: 100px;
+  --hero-content-gap: 40px;
+
+  --grid-gap-xs: 12px;
+  --grid-gap-sm: 16px;
+  --grid-gap-md: 24px;
+  --grid-gap-lg: 32px;
+  --grid-gap-xl: 40px;
+
+  --gallery-gap: 20px;
+  --gallery-radius: 22px;
+
+  --modal-padding: 32px;
+  --modal-radius: 24px;
+
+  --dropdown-padding: 12px;
+  --dropdown-radius: 16px;
+}
+
+@layer utilities {
+  /* ==========================================================
+     LAYOUT CONTAINERS & UTILITIES
+     ========================================================== */
+  .container {
+    width: min(100% - calc(var(--gutter-mobile) * 2), var(--container-xl));
+    margin-inline: auto;
+  }
+  .container-wide {
+    width: min(100% - calc(var(--gutter-desktop) * 2), var(--container-max));
+    margin-inline: auto;
+  }
+  .container-reading {
+    width: min(100% - 40px, 760px);
+    margin-inline: auto;
+  }
+  
+  .section-xs { padding-block: var(--section-xs); }
+  .section-sm { padding-block: var(--section-sm); }
+  .section-md { padding-block: var(--section-md); }
+  .section-lg { padding-block: var(--section-lg); }
+  .section-xl { padding-block: var(--section-xl); }
+  
+  .stack-xs > * + * { margin-top: 8px; }
+  .stack-sm > * + * { margin-top: 16px; }
+  .stack-md > * + * { margin-top: 24px; }
+  .stack-lg > * + * { margin-top: 32px; }
+  .stack-xl > * + * { margin-top: 48px; }
+  
+  .cluster {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .grid { display: grid; gap: 24px; }
+  .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  
+  .flex { display: flex; }
+  .flex-center { display: flex; justify-content: center; align-items: center; }
+  .flex-between { display: flex; justify-content: space-between; align-items: center; }
+  .flex-column { display: flex; flex-direction: column; }
+}
+
+@media(max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .container { width: min(100% - 32px, 100%); }
+  
+  :root {
+    --hero-padding-top: 88px;
+    --hero-padding-bottom: 72px;
+    --section-lg: 96px;
+    --section-xl: 120px;
+  }
+}

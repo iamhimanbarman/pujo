@@ -1,0 +1,288 @@
+/* ==========================================================
+   SHAROD DARSHAN
+   Semantic Design Tokens
+   Version 1.0
+   ========================================================== */
+
+:root {
+  /* BACKGROUND */
+  --background-primary: var(--neutral-50);
+  --background-secondary: var(--ivory-300);
+  --background-tertiary: var(--neutral-200);
+  --background-elevated: var(--neutral-0);
+  --background-inverse: var(--neutral-950);
+
+  /* Hero Backgrounds */
+  --background-hero: linear-gradient(180deg, var(--ivory-100), var(--ivory-400));
+  --background-festival: linear-gradient(135deg, var(--brand-red-700), var(--gold-400));
+  --background-night: linear-gradient(180deg, #220B12, #45121E);
+
+  /* SURFACE */
+  --surface-primary: var(--neutral-0);
+  --surface-secondary: var(--ivory-100);
+  --surface-tertiary: var(--neutral-100);
+  --surface-elevated: var(--neutral-0);
+  --surface-hover: var(--neutral-100);
+  --surface-active: var(--neutral-200);
+  --surface-selected: var(--brand-red-50);
+
+  /* CARD */
+  --card-background: var(--neutral-0);
+  --card-background-hover: var(--ivory-100);
+  --card-border: var(--neutral-300);
+  --card-title: var(--neutral-900);
+  --card-description: var(--neutral-700);
+  --card-shadow: rgba(18,13,11,.08);
+
+  /* TEXT */
+  --text-primary: var(--neutral-900);
+  --text-secondary: var(--neutral-700);
+  --text-tertiary: var(--neutral-600);
+  --text-disabled: var(--neutral-500);
+  --text-placeholder: var(--neutral-500);
+  --text-inverse: var(--neutral-0);
+  --text-brand: var(--brand-red-700);
+  --text-gold: var(--gold-700);
+  --text-success: var(--leaf-700);
+  --text-warning: var(--marigold-700);
+  --text-error: #B42318;
+
+  /* BORDER */
+  --border-primary: var(--neutral-300);
+  --border-secondary: var(--neutral-200);
+  --border-strong: var(--neutral-400);
+  --border-brand: var(--brand-red-700);
+
+  /* BUTTON PRIMARY */
+  --button-primary-bg: var(--brand-red-700);
+  --button-primary-hover: var(--brand-red-800);
+  --button-primary-active: var(--brand-red-900);
+  --button-primary-text: var(--neutral-0);
+  --button-primary-border: transparent;
+
+  /* BUTTON SECONDARY */
+  --button-secondary-bg: var(--gold-400);
+  --button-secondary-hover: var(--gold-500);
+  --button-secondary-active: var(--gold-600);
+  --button-secondary-text: var(--neutral-900);
+
+  /* BUTTON OUTLINE */
+  --button-outline-bg: transparent;
+  --button-outline-border: var(--brand-red-700);
+  --button-outline-text: var(--brand-red-700);
+  --button-outline-hover: var(--brand-red-50);
+
+  /* BUTTON GHOST */
+  --button-ghost-bg: transparent;
+  --button-ghost-hover: var(--neutral-100);
+  --button-ghost-text: var(--neutral-800);
+
+  /* INPUT */
+  --input-bg: var(--neutral-0);
+  --input-border: var(--neutral-300);
+  --input-border-hover: var(--neutral-400);
+  --input-border-focus: var(--brand-red-700);
+  --input-text: var(--neutral-900);
+  --input-placeholder: var(--neutral-500);
+
+  /* NAVIGATION */
+  --navbar-bg: rgba(255,255,255,.82);
+  --navbar-border: rgba(0,0,0,.05);
+  --navbar-link: var(--neutral-700);
+  --navbar-link-hover: var(--brand-red-700);
+  --navbar-link-active: var(--brand-red-700);
+
+  /* SIDEBAR */
+  --sidebar-bg: var(--neutral-0);
+  --sidebar-item: var(--neutral-700);
+  --sidebar-item-hover: var(--brand-red-700);
+  --sidebar-item-active-bg: var(--brand-red-50);
+  --sidebar-item-active-text: var(--brand-red-700);
+
+  /* BADGES */
+  --badge-famous-bg: var(--gold-100);
+  --badge-famous-text: var(--gold-700);
+  --badge-traditional-bg: var(--terracotta-100);
+  --badge-traditional-text: var(--terracotta-700);
+  --badge-new-bg: var(--brand-red-50);
+  --badge-new-text: var(--brand-red-700);
+  --badge-approved-bg: var(--leaf-100);
+  --badge-approved-text: var(--leaf-700);
+
+  /* STATUS */
+  --success-bg: var(--leaf-100);
+  --success-border: var(--leaf-300);
+  --success-text: var(--leaf-700);
+  --warning-bg: var(--gold-100);
+  --warning-border: var(--gold-300);
+  --warning-text: var(--gold-700);
+  --error-bg: #FEF3F2;
+  --error-border: #FDA29B;
+  --error-text: #B42318;
+  --info-bg: var(--ganga-100);
+  --info-border: var(--ganga-300);
+  --info-text: var(--ganga-700);
+
+  /* IMAGE OVERLAYS */
+  --overlay-light: rgba(255,255,255,.72);
+  --overlay-dark: rgba(0,0,0,.48);
+  --overlay-hero: linear-gradient(rgba(0,0,0,.10), rgba(0,0,0,.55));
+
+  /* GALLERY */
+  --gallery-background: var(--neutral-100);
+  --gallery-border: var(--neutral-300);
+  --gallery-hover: var(--brand-red-50);
+
+  /* MAP */
+  --map-water: var(--ganga-300);
+  --map-land: var(--ivory-300);
+  --map-road: #D4C6B8;
+  --map-highlight: var(--brand-red-700);
+
+  /* LINKS */
+  --link-default: var(--brand-red-700);
+  --link-hover: var(--brand-red-800);
+  --link-active: var(--brand-red-900);
+  --link-visited: #7B1FA2;
+
+  /* FOCUS */
+  --focus-ring: rgba(161,18,36,.28);
+  --selection-bg: rgba(161,18,36,.18);
+}
+
+.dark {
+  /* BACKGROUND */
+  --background-primary: #120D0B;
+  --background-secondary: #191210;
+  --background-tertiary: #221814;
+  --background-elevated: #2A1F1A;
+  --background-inverse: #FFFDF9;
+  --background-hero: linear-gradient(180deg, #2D0E18, #120D0B);
+  --background-festival: linear-gradient(135deg, #A11224, #D6A034);
+  --background-night: linear-gradient(180deg, #120D0B, #260E16);
+
+  /* SURFACE */
+  --surface-primary: #1B1412;
+  --surface-secondary: #241A17;
+  --surface-tertiary: #2E211D;
+  --surface-elevated: #352622;
+  --surface-hover: #3C2B26;
+  --surface-active: #49342E;
+  --surface-selected: rgba(161,18,36,.20);
+
+  /* CARD */
+  --card-background: #211815;
+  --card-background-hover: #2A1F1A;
+  --card-border: #43322C;
+  --card-title: #FFF8F3;
+  --card-description: #DCCEC4;
+  --card-shadow: rgba(0,0,0,.55);
+
+  /* TEXT */
+  --text-primary: #FFF8F3;
+  --text-secondary: #DCCEC4;
+  --text-tertiary: #B7A79A;
+  --text-disabled: #7E6F63;
+  --text-placeholder: #85786C;
+  --text-inverse: #211610;
+  --text-brand: #FF6477;
+  --text-gold: #FFD76B;
+  --text-success: #6FD58A;
+  --text-warning: #FFD15C;
+  --text-error: #FF8C84;
+
+  /* BUTTON PRIMARY */
+  --button-primary-bg: #C8102E;
+  --button-primary-hover: #D91F3E;
+  --button-primary-active: #E52D4B;
+  --button-primary-text: white;
+
+  /* BUTTON SECONDARY */
+  --button-secondary-bg: #D6A034;
+  --button-secondary-hover: #E3B447;
+  --button-secondary-active: #F1C85C;
+  --button-secondary-text: #1E120E;
+
+  /* BUTTON OUTLINE */
+  --button-outline-bg: transparent;
+  --button-outline-border: #C8102E;
+  --button-outline-text: #FF6477;
+  --button-outline-hover: rgba(200,16,46,.15);
+
+  /* BUTTON GHOST */
+  --button-ghost-bg: transparent;
+  --button-ghost-hover: rgba(255,255,255,.05);
+  --button-ghost-text: #F2E8E2;
+
+  /* INPUT */
+  --input-bg: #2A1E1A;
+  --input-border: #4A3731;
+  --input-border-hover: #644A43;
+  --input-border-focus: #D91F3E;
+  --input-text: #FFF8F3;
+  --input-placeholder: #8D8074;
+
+  /* NAVIGATION */
+  --navbar-bg: rgba(18,13,11,.82);
+  --navbar-border: rgba(255,255,255,.05);
+  --navbar-link: #DCCEC4;
+  --navbar-link-hover: #FF6477;
+  --navbar-link-active: #FFD76B;
+
+  /* SIDEBAR */
+  --sidebar-bg: #191210;
+  --sidebar-item: #DCCEC4;
+  --sidebar-item-hover: #FFD76B;
+  --sidebar-item-active-bg: rgba(200,16,46,.20);
+  --sidebar-item-active-text: #FFFFFF;
+
+  /* BADGES */
+  --badge-famous-bg: rgba(214,160,52,.18);
+  --badge-famous-text: #FFD76B;
+  --badge-traditional-bg: rgba(164,75,37,.20);
+  --badge-traditional-text: #F0B08A;
+  --badge-new-bg: rgba(200,16,46,.20);
+  --badge-new-text: #FF91A0;
+  --badge-approved-bg: rgba(47,125,67,.22);
+  --badge-approved-text: #7EE79A;
+
+  /* STATUS */
+  --success-bg: rgba(47,125,67,.18);
+  --success-border: #4FA960;
+  --success-text: #7EE79A;
+  --warning-bg: rgba(214,160,52,.18);
+  --warning-border: #D6A034;
+  --warning-text: #FFD76B;
+  --error-bg: rgba(200,16,46,.20);
+  --error-border: #E52D4B;
+  --error-text: #FFA7B2;
+  --info-bg: rgba(46,112,128,.20);
+  --info-border: #4CA6BA;
+  --info-text: #9EDCEA;
+
+  /* GALLERY */
+  --gallery-background: #191210;
+  --gallery-border: #3A2A24;
+  --gallery-hover: rgba(200,16,46,.18);
+
+  /* MAP */
+  --map-water: #265E70;
+  --map-land: #2C221E;
+  --map-road: #56443D;
+  --map-highlight: #D91F3E;
+
+  /* LINKS */
+  --link-default: #FF6477;
+  --link-hover: #FF8A98;
+  --link-active: #FFC1CA;
+  --link-visited: #D69CFF;
+
+  /* OVERLAYS */
+  --overlay-light: rgba(255,255,255,.08);
+  --overlay-dark: rgba(0,0,0,.60);
+  --overlay-hero: linear-gradient(rgba(0,0,0,.30), rgba(0,0,0,.72));
+
+  /* ACCESSIBILITY */
+  --focus-ring: rgba(255,100,119,.45);
+  --selection-bg: rgba(255,100,119,.22);
+}
