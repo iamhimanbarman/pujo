@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import logo from "@/assets/logo.jpg"
+import logo from "@/assets/logo-nobg.png"
 import Link from "next/link"
 import { Search, Plus, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -16,7 +16,7 @@ export function Navbar() {
         
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 outline-none focus-visible:ring-3 focus-visible:ring-brand rounded-md">
-          <Image src={logo} alt="Sharod Darshan Logo" width={40} height={40} className="rounded-full object-cover shadow-sm border border-[var(--border-secondary)]" />
+          <Image src={logo} alt="Sharod Darshan Logo" width={40} height={40} className="object-contain" />
           <span className="font-display font-bold text-2xl md:text-3xl tracking-tight text-[var(--text-brand)]">
             Sharod<span className="text-[var(--text-gold)]">Darshan</span>
           </span>
