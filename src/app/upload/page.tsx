@@ -209,7 +209,7 @@ export default function UploadPage() {
                   <img src={preview} alt="Preview" className="max-w-full max-h-full object-contain" />
                   <Button 
                     type="button"
-                    variant="destructive"
+                    variant="danger"
                     size="icon"
                     className="absolute top-4 right-4 rounded-full shadow-lg"
                     onClick={clearFile}

@@ -2,8 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { MapPin } from "lucide-react"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge" // Need to check if Badge exists, we can use a custom badge or Shadcn badge
-
 export interface PujoCardProps {
   id: string
   name: string
