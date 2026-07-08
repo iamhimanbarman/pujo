@@ -15,8 +15,10 @@ export function Navbar() {
       <div className="container h-[var(--navbar-height)] flex items-center justify-between px-[var(--navbar-padding)]">
         
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 outline-none focus-visible:ring-3 focus-visible:ring-brand rounded-md">
-          <Image src={logo} alt="Sharod Darshan Logo" width={40} height={40} className="object-contain" />
+        <Link href="/" className="flex items-center gap-2.5 outline-none focus-visible:ring-3 focus-visible:ring-brand rounded-md">
+          <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center p-1 shadow-md border border-[var(--border-secondary)] overflow-hidden">
+            <Image src={logo} alt="Sharod Darshan Logo" width={36} height={36} className="object-contain w-full h-full" />
+          </div>
           <span className="font-display font-bold text-2xl md:text-3xl tracking-tight text-[var(--text-brand)]">
             Sharod<span className="text-[var(--text-gold)]">Darshan</span>
           </span>
